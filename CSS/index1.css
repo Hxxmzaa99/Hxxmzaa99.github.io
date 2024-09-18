@@ -42,7 +42,7 @@ p {
 .Navigation ul {
     list-style: none;
     padding: 0;
-    display: flow;
+    display: flex;
     justify-content: center;
 }
 
