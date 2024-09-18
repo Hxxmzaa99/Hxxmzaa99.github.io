@@ -1,12 +1,13 @@
 /* index1.css */
 body {
-display: block;
-justify-content: center;
-align-items: center;
-height: 100vh; 
-margin: 0; 
-text-align: center; 
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            text-align: center; /* Center text */
+        }
+
 
 header {
     background: #007BFF;
