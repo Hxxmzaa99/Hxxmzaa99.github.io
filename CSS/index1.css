@@ -55,7 +55,6 @@ p {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
 }
 
 .Navigation a:hover,
