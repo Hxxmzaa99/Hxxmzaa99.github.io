@@ -1,12 +1,12 @@
 /* index1.css */
 body {
-display: flex;
+display: flexbox;
 justify-content: center;
 align-items: center;
 height: 100vh; 
 margin: 0; 
 text-align: center; 
-        }
+}
 
 header {
     background: #007BFF;
