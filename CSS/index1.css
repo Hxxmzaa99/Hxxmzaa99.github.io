@@ -36,7 +36,7 @@ p {
 .Navigation {
     background: #343a40;
     padding: 5% 0;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .Navigation ul {
