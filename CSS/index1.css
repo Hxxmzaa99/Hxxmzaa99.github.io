@@ -1,6 +1,6 @@
 /* index1.css */
 body {
-display: flex;
+display: block;
 justify-content: center;
 align-items: center;
 height: 100vh; 
