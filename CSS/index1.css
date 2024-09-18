@@ -1,6 +1,6 @@
 /* index1.css */
 body {
-    display: block;
+    display: inline-block;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20;
@@ -15,7 +15,6 @@ header {
     padding: 40px 20px;
     text-align: center;
     border-bottom: 5px solid #0056b3;
-    max-width: 800px;
 }
 
 h1#TITRE1 {
