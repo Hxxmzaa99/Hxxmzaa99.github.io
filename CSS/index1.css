@@ -1,21 +1,22 @@
 /* index1.css */
 body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full viewport height */
-            margin: 0; /* Remove default margin */
-            text-align: center; /* Center text */
-        }
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start instead of center */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center text */
+}
 
+.container {
+    max-width: 800px; /* Limit the width of the container */
+    margin: 20px; /* Add margin around the container */
+}
 
 header {
     background: #007BFF;
     color: white;
     padding: 40px 20px;
-    text-align: center;
     border-bottom: 5px solid #0056b3;
-    margin: 
 }
 
 h1#TITRE1 {
@@ -24,7 +25,6 @@ h1#TITRE1 {
 }
 
 p {
-    max-width: 800px;
     margin: 20px auto;
     padding: 15px;
     background: #ffffff;
@@ -63,8 +63,6 @@ p {
 }
 
 section#conclusionindex {
-    max-width: 800px;
-    margin: 20px auto;
     padding: 30px;
     background: #ffffff;
     border-radius: 10px;
@@ -75,7 +73,6 @@ section#conclusionindex {
 footer {
     background: #007BFF;
     color: white;
-    text-align: center;
     padding: 20px 0;
     margin-top: 30px;
 }
