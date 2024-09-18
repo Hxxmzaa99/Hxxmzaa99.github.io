@@ -1,10 +1,10 @@
 /* index1.css */
 body {
-display: flexbox;
+display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh; 
-margin: 0; 
+margin: 50px; 
 text-align: center; 
 }
 
