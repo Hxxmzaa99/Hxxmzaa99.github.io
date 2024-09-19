@@ -44,6 +44,11 @@ section#conclusionindex {
     text-align: center;
 }
 
+section {
+    margin: 20px auto; /* Espace autour du cadre, centré */
+}
+
+
 footer {
     background: purple;
     color: grey;
