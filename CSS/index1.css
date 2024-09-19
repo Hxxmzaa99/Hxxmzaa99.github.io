@@ -73,3 +73,13 @@ footer a {
 footer a:hover {
     color: #ffcc00;
 }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 20px; /* Espace interne */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
