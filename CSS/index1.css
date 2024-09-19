@@ -33,35 +33,6 @@ p {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.Navigation {
-    background: #343a40;
-    padding: 5% 0;
-    max-width: 100%;
-}
-
-.Navigation ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.Navigation li {
-    margin: 0 15px;
-}
-
-.Navigation a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.Navigation a:hover,
-.Navigation a.active {
-    background: #495057;
-    transform: scale(1.1);
-}
 
 section#conclusionindex {
     max-width: 800px;
