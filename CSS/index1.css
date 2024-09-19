@@ -62,6 +62,7 @@ footer a {
     color: white;
     text-decoration: underline;
     max-width: 600px;
+    border-radius: 20px;
 }
 
 footer a:hover {
