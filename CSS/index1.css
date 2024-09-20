@@ -78,7 +78,6 @@ footer a:hover {
     max-width: 800px;
     margin: 0 auto; /* Centrage horizontal */
     padding: 20px; /* Espace interne */
-    background: violet;
     border-radius: 10px;
 }
 
