@@ -81,6 +81,17 @@ footer a:hover {
 }
 
 #countdown-timer {
-    border: 2px solid red; /* Juste pour tester */
+    display: inline-block;
+    padding: 10px 20px;
+    background: violet;
+    color: #ffcc00;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
+
+#countdown-timer:hover {
+    background: #ffcc00;
+    color: #343a40;
+}
+
 
