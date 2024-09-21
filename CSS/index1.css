@@ -1,28 +1,21 @@
-/* index1.css */
-:root {
-    --primary-bg: purple;
-    --secondary-bg: #343a40;
-    --highlight-color: #ffcc00;
-    --text-color: #333;
-    --footer-text-color: #fff;
-}
-
+/* General Body Styles */
 body {
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     line-height: 1.6;
     padding: 20px;
     background-color: grey;
-    color: var(--text-color);
+    color: #333; /* Text color */
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
+/* Header Styling */
 header {
-    background: var(--primary-bg);
+    background: purple; /* Primary background color */
     color: white;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid var(--primary-bg);
+    border-bottom: 5px solid purple;
 }
 
 h1#TITRE1 {
@@ -30,6 +23,7 @@ h1#TITRE1 {
     font-size: 2.5em;
 }
 
+/* Paragraph Styling */
 p {
     max-width: 800px;
     margin: 20px auto;
@@ -39,17 +33,19 @@ p {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Styling */
 section {
-    margin: 20px auto; /* Espace autour du cadre, centré */
+    margin: 20px auto; /* Space around sections */
 }
 
+/* Footer Styling */
 footer {
-    background: var(--primary-bg);
-    color: var(--footer-text-color);
+    background: purple; /* Footer background */
+    color: white; /* Footer text color */
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    margin-bottom: 20px; /* Espace en bas */
+    margin-bottom: 20px; /* Space at the bottom */
 }
 
 footer ul {
@@ -57,22 +53,20 @@ footer ul {
     padding: 0;
 }
 
+footer li {
+    margin-bottom: 10px;
+}
+
 footer a {
-    color: var(--footer-text-color);
+    color: white;
     text-decoration: underline;
 }
 
 footer a:hover {
-    color: var(--highlight-color);
+    color: #ffcc00; /* Highlight color */
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-}
-
+/* Countdown Timer Styling */
 #countdown {
     font-size: 1.5em;
     font-weight: bold;
@@ -82,20 +76,21 @@ footer a:hover {
 #countdown-timer {
     display: inline-block;
     padding: 10px 20px;
-    background: #495057;
-    color: var(--highlight-color);
+    background: #495057; /* Timer background */
+    color: #ffcc00; /* Timer highlight color */
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
 }
 
 #countdown-timer:hover {
-    background: var(--highlight-color);
-    color: #343a40;
+    background: #ffcc00;
+    color: #343a40; /* Text color on hover */
 }
 
+/* Navigation Bar */
 .Navigation {
-    background: var(--secondary-bg);
+    background: #343a40; /* Secondary background */
     padding: 5% 0;
 }
 
@@ -119,17 +114,55 @@ footer a:hover {
 
 .Navigation a:hover,
 .Navigation a.active {
-    background: #495057;
+    background: #495057; /* Hover and active background */
     transform: scale(1.1);
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+        max-width: 100%; /* Ensure full width */
+    }
+
     h1#TITRE1 {
-        font-size: 2em;
+        font-size: 2em; /* Adjust title size */
+    }
+
+    p {
+        padding: 10px;
+        margin: 15px 5px; /* Adjust margins */
+    }
+
+    /* Adjust Navigation for Smaller Screens */
+    .Navigation ul {
+        flex-direction: column;
+        padding: 0;
     }
 
     .Navigation li {
-        margin: 0 10px;
+        margin: 10px 0; /* Spacing between items */
+    }
+
+    .Navigation a {
+        padding: 15px; /* Increase padding for better touch area */
+        font-size: 1rem;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer ul {
+        padding: 0;
+    }
+
+    footer li {
+        margin-bottom: 5px; /* Reduce margin */
+    }
+
+    footer a {
+        font-size: 0.9rem; /* Smaller text */
     }
 }
