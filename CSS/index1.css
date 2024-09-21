@@ -111,7 +111,7 @@ footer a:hover {
 }
 
 .Navigation a {
-    color: white;
+    color: var(--primary-bg);
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
