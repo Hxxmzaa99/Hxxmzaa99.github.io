@@ -1,22 +1,28 @@
-/* General Body Styles */
+/* index1.css */
+:root {
+    --primary-bg: purple;
+    --secondary-bg: #343a40;
+    --highlight-color: #ffcc00;
+    --text-color: #333;
+    --footer-text-color: #fff;
+}
+
 body {
-    display: block;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: grey;
+    color: var(--text-color);
     max-width: 800px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-/* Header Styling */
 header {
-    background: #6a1b9a;
+    background: var(--primary-bg);
     color: white;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid #6a1b9a;
+    border-bottom: 5px solid var(--primary-bg);
 }
 
 h1#TITRE1 {
@@ -24,7 +30,6 @@ h1#TITRE1 {
     font-size: 2.5em;
 }
 
-/* Paragraph Styling */
 p {
     max-width: 800px;
     margin: 20px auto;
@@ -34,19 +39,17 @@ p {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Styling */
 section {
-    margin: 20px auto; 
+    margin: 20px auto; /* Espace autour du cadre, centré */
 }
 
-/* Footer Styling */
 footer {
-    background: #6a1b9a;
-    color: white;
+    background: var(--primary-bg);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    max-width: 800px;
+    margin-bottom: 20px; /* Espace en bas */
 }
 
 footer ul {
@@ -54,22 +57,24 @@ footer ul {
     padding: 0;
 }
 
-footer li {
-    margin: 10px 0;
-}
-
 footer a {
-    color: #ffcc00;
+    color: var(--footer-text-color);
     text-decoration: underline;
 }
 
 footer a:hover {
-    color: #ffcc33;
+    color: var(--highlight-color);
 }
 
-/* Countdown Timer */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 #countdown {
-    font-size: 1.2rem;
+    font-size: 1.5em;
     font-weight: bold;
     margin-top: 10px;
 }
@@ -78,22 +83,20 @@ footer a:hover {
     display: inline-block;
     padding: 10px 20px;
     background: #495057;
-    color: #ffcc00;
+    color: var(--highlight-color);
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
 }
 
 #countdown-timer:hover {
-    background: #ffcc00;
+    background: var(--highlight-color);
     color: #343a40;
 }
 
-/* Navigation Bar */
 .Navigation {
-    background: #343a40;
+    background: var(--secondary-bg);
     padding: 5% 0;
-    max-width: 100%;
 }
 
 .Navigation ul {
@@ -120,64 +123,13 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-/* ----------- MEDIA QUERIES FOR MOBILE ----------- */
-@media (max-width: 768px) {
-    body {
-        padding: 2%;
-        max-width: 100%; /* Ensure full width on smaller screens */
-    }
-
-    header {
-        padding: 3% 5%; /* Adjust padding for smaller screens */
-        text-align: center;
-    }
-
+/* Media Queries */
+@media (max-width: 600px) {
     h1#TITRE1 {
-        font-size: 2rem; /* Reduce font size on mobile */
-    }
-
-    p {
-        width: 100%;
-        margin: 1em auto;
-        padding: 1em;
-    }
-
-    section {
-        padding: 1.5em;
-        width: 100%; /* Ensure full width on mobile */
-    }
-
-    /* Navigation - Adjusting for mobile */
-    .Navigation ul {
-        flex-direction: column;
+        font-size: 2em;
     }
 
     .Navigation li {
-        margin: 5px 0; /* Add spacing between nav items */
-    }
-
-    .Navigation a {
-        display: block;
-        padding: 10px;
-        font-size: 1rem;
-    }
-
-    /* Footer Adjustments for Mobile */
-    footer {
-        padding: 10px 0;
-        margin-top: 10px;
-    }
-
-    footer ul {
-        padding: 0;
-        text-align: center;
-    }
-
-    footer li {
-        margin: 5px 0;
-    }
-
-    footer a {
-        font-size: 0.9rem; /* Reduce font size for mobile */
+        margin: 0 10px;
     }
 }
