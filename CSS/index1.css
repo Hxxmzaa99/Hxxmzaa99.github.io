@@ -1,23 +1,28 @@
-/* General Body Styles */
+/* index1.css */
+:root {
+    --primary-bg: purple;
+    --secondary-bg: #343a40;
+    --highlight-color: #ffcc00;
+    --text-color: #333;
+    --footer-text-color: #fff;
+}
+
 body {
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     line-height: 1.6;
     padding: 20px;
     background-color: grey;
-    color: #333; /* Text color */
-    max-width: 100%; /* Full width for responsive */
-    width: 80%; /* Desktop: 80% width */
-    margin: 0 auto; 
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Header Styling */
 header {
-    background: purple; /* Primary background color */
+    background: var(--primary-bg);
     color: white;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid purple;
-    width: 100%;
+    border-bottom: 5px solid var(--primary-bg);
 }
 
 h1#TITRE1 {
@@ -25,32 +30,26 @@ h1#TITRE1 {
     font-size: 2.5em;
 }
 
-/* Paragraph Styling */
 p {
+    max-width: 800px;
     margin: 20px auto;
     padding: 15px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    width: 80%;
 }
 
-/* Section Styling */
 section {
-    margin: 20px auto; /* Space around sections */
-    width: 80%;
+    margin: 20px auto; /* Espace autour du cadre, centré */
 }
 
-/* Footer Styling */
 footer {
-    background: purple; /* Footer background */
-    color: white; /* Footer text color */
+    background: var(--primary-bg);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    margin-bottom: 20px; /* Space at the bottom */
-    width: 80%;
+    margin-bottom: 20px; /* Espace en bas */
 }
 
 footer ul {
@@ -58,20 +57,22 @@ footer ul {
     padding: 0;
 }
 
-footer li {
-    margin-bottom: 10px;
-}
-
 footer a {
-    color: white;
+    color: var(--footer-text-color);
     text-decoration: underline;
 }
 
 footer a:hover {
-    color: #ffcc00; /* Highlight color */
+    color: var(--highlight-color);
 }
 
-/* Countdown Timer Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 #countdown {
     font-size: 1.5em;
     font-weight: bold;
@@ -81,23 +82,21 @@ footer a:hover {
 #countdown-timer {
     display: inline-block;
     padding: 10px 20px;
-    background: #495057; /* Timer background */
-    color: #ffcc00; /* Timer highlight color */
+    background: #495057;
+    color: var(--highlight-color);
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
 }
 
 #countdown-timer:hover {
-    background: #ffcc00;
-    color: #343a40; /* Text color on hover */
+    background: var(--highlight-color);
+    color: #343a40;
 }
 
-/* Navigation Bar */
 .Navigation {
-    background: #343a40; /* Secondary background */
+    background: var(--secondary-bg);
     padding: 5% 0;
-    width: 100%;
 }
 
 .Navigation ul {
@@ -105,7 +104,6 @@ footer a:hover {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures better alignment on mobile */
 }
 
 .Navigation li {
@@ -121,62 +119,17 @@ footer a:hover {
 
 .Navigation a:hover,
 .Navigation a.active {
-    background: #495057; /* Hover and active background */
+    background: #495057;
     transform: scale(1.1);
 }
 
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    body {
-        padding: 10px; /* Reduce padding on smaller screens */
-        max-width: 100%; /* Full width */
-        width: 100%;
-    }
-
+/* Media Queries */
+@media (max-width: 600px) {
     h1#TITRE1 {
-        font-size: 2em; /* Adjust title size */
-    }
-
-    p {
-        padding: 10px;
-        margin: 15px 5px; /* Adjust margins */
-        width: 100%;
-    }
-
-    section {
-        width: 100%; /* Full width for sections */
-    }
-
-    /* Adjust Navigation for Smaller Screens */
-    .Navigation ul {
-        flex-direction: column;
-        padding: 0;
+        font-size: 2em;
     }
 
     .Navigation li {
-        margin: 10px 0; /* Spacing between items */
-    }
-
-    .Navigation a {
-        padding: 15px; /* Increase padding for better touch area */
-        font-size: 1rem;
-    }
-
-    /* Footer Adjustments */
-    footer {
-        padding: 15px 10px;
-        width: 100%;
-    }
-
-    footer ul {
-        padding: 0;
-    }
-
-    footer li {
-        margin-bottom: 5px; /* Reduce margin */
-    }
-
-    footer a {
-        font-size: 0.9rem; /* Smaller text */
+        margin: 0 10px;
     }
 }
