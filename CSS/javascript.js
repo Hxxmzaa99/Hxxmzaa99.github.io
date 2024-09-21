@@ -1,7 +1,10 @@
+// JAvascript pour le html et Portfolio
+//Fonction pour ajouter un décompte 
+
 function compteARebours() {
     const affichageCountdown = document.getElementById('countdown-timer');
-
-    const dateFin = new Date('2026-12-31T23:59:59').getTime(); // Fin du diplome
+    // Fin du diplome
+    const dateFin = new Date('2026-12-31T23:59:59').getTime(); 
 
     const intervalCountdown = setInterval(function() {
         const maintenant = new Date().getTime();
