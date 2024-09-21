@@ -1,76 +1,78 @@
-/* General Styles */
+/* General Body Styles */
 body {
     display: block;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     line-height: 1.6;
-    padding: 20px;
-    background-color: #f0f0f0; /* Light grey background for better readability */
+    padding: 2%; /* Use percentages instead of fixed padding */
+    background-color: #f0f0f0;
     color: #333;
-    max-width: 800px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    max-width: 100%; /* Make sure the content spans the width of the viewport */
 }
 
 /* Header Styling */
 header {
-    background: #6a1b9a; /* Adjusted to a softer purple for better contrast */
+    background: #6a1b9a;
     color: white;
-    padding: 40px 20px;
+    padding: 3% 5%; /* Relative padding to adjust on smaller screens */
     text-align: center;
-    border-bottom: 5px solid #6a1b9a;
 }
 
 h1#TITRE1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2rem; /* Relative units for better scaling on different screens */
 }
 
 /* Paragraph Styling */
 p {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 15px;
-    background: #ffffff; /* White background for readability */
+    margin: 1em auto;
+    padding: 1em;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    color: #333; /* Ensure text color is readable */
+    color: #333;
+    width: 100%; /* Full width to ensure proper scaling */
+    max-width: 100%; /* Avoid fixed widths */
+}
+
+/* Section Styling */
+section {
+    margin: 2% auto;
+    padding: 1.5em;
+    width: 100%; /* Full width on mobile */
 }
 
 /* Footer Styling */
 footer {
-    background: #6a1b9a; /* Same purple as header for consistency */
-    color: white; /* Ensures text is readable on purple background */
+    background: #6a1b9a;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-    max-width: 800px;
-    border-top: 3px solid #4a148c;
+    padding: 2% 0;
+    width: 100%;
 }
 
 /* Footer Link Styles */
 footer ul {
     list-style: none;
     padding: 0;
-    margin: 0 auto;
 }
 
 footer li {
-    margin: 5px 0;
+    margin: 1% 0;
 }
 
 footer a {
-    color: #ffcc00; /* Yellow text for better visibility */
+    color: #ffcc00;
     text-decoration: underline;
-    max-width: 600px;
-    border-radius: 20px;
 }
 
 footer a:hover {
-    color: #ffcc33; /* Slightly lighter hover effect */
+    color: #ffcc33;
 }
 
-/* Footer Countdown Timer */
+/* Countdown Timer */
 #countdown {
-    font-size: 1.5em;
+    font-size: 1.2rem; /* Relative font size */
     font-weight: bold;
     margin-top: 10px;
 }
@@ -78,23 +80,24 @@ footer a:hover {
 #countdown-timer {
     display: inline-block;
     padding: 10px 20px;
-    background: #495057; /* Dark background for contrast */
-    color: #ffcc00; /* Yellow text to match footer links */
+    background: #495057;
+    color: #ffcc00;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
 }
 
 #countdown-timer:hover {
-    background: #ffcc00; /* Yellow background on hover */
-    color: #343a40; /* Dark text for readability */
+    background: #ffcc00;
+    color: #343a40;
 }
 
 /* Navigation Bar */
 .Navigation {
-    background: #343a40; /* Dark grey */
+    background: #343a40;
     padding: 5% 0;
-    max-width: 100%;
+    width: 100%;
+    text-align: center;
 }
 
 .Navigation ul {
@@ -102,45 +105,23 @@ footer a:hover {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Ensures the nav items wrap if they don’t fit in one line */
 }
 
 .Navigation li {
-    margin: 0 15px;
+    margin: 1% 5%;
 }
 
 .Navigation a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 0.8em 1.5em;
     border-radius: 5px;
+    display: block;
 }
 
 .Navigation a:hover,
 .Navigation a.active {
-    background: #495057; /* Slightly lighter grey for hover effect */
+    background: #495057;
     transform: scale(1.1);
-}
-
-/* Section Styling */
-section {
-    margin: 20px auto; /* Space around sections, centered */
-}
-
-section#conclusionindex {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Make sure all elements are centered and legible */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff; /* Ensure readable background */
 }
