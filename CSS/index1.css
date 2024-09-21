@@ -123,13 +123,4 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-    h1#TITRE1 {
-        font-size: 2em;
-    }
 
-    .Navigation li {
-        margin: 0 10px;
-    }
-}
