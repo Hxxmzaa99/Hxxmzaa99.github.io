@@ -1,28 +1,22 @@
-/* index1.css */
-:root {
-    --primary-bg: purple;
-    --secondary-bg: #343a40;
-    --highlight-color: #ffcc00;
-    --text-color: #333;
-    --footer-text-color: #fff;
-}
-
+/* General Styles */
 body {
+    display: block;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    background-color: grey;
-    color: var(--text-color);
+    background-color: #f0f0f0; /* Light grey background for better readability */
+    color: #333;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
+/* Header Styling */
 header {
-    background: var(--primary-bg);
+    background: #6a1b9a; /* Adjusted to a softer purple for better contrast */
     color: white;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid var(--primary-bg);
+    border-bottom: 5px solid #6a1b9a;
 }
 
 h1#TITRE1 {
@@ -30,92 +24,123 @@ h1#TITRE1 {
     font-size: 2.5em;
 }
 
+/* Paragraph Styling */
 p {
     max-width: 800px;
     margin: 20px auto;
     padding: 15px;
-    background: #ffffff;
+    background: #ffffff; /* White background for readability */
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #333; /* Ensure text color is readable */
 }
 
-section {
-    margin: 20px auto; /* Espace autour du cadre, centré */
-}
-
+/* Footer Styling */
 footer {
-    background: var(--primary-bg);
-    color: var(--footer-text-color);
+    background: #6a1b9a; /* Same purple as header for consistency */
+    color: white; /* Ensures text is readable on purple background */
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    margin-bottom: 20px; /* Espace en bas */
+    max-width: 800px;
+    border-top: 3px solid #4a148c;
 }
 
+/* Footer Link Styles */
 footer ul {
     list-style: none;
     padding: 0;
+    margin: 0 auto;
+}
+
+footer li {
+    margin: 5px 0;
 }
 
 footer a {
-    color: var(--footer-text-color);
+    color: #ffcc00; /* Yellow text for better visibility */
     text-decoration: underline;
+    max-width: 600px;
+    border-radius: 20px;
 }
 
 footer a:hover {
-    color: var(--highlight-color);
+    color: #ffcc33; /* Slightly lighter hover effect */
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
+/* Footer Countdown Timer */
+#countdown {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 #countdown-timer {
     display: inline-block;
     padding: 10px 20px;
-    background: #495057;
-    color: #ffcc00;
+    background: #495057; /* Dark background for contrast */
+    color: #ffcc00; /* Yellow text to match footer links */
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
 }
 
 #countdown-timer:hover {
-    background: #ffcc00;
-    color: #343a40;
+    background: #ffcc00; /* Yellow background on hover */
+    color: #343a40; /* Dark text for readability */
 }
 
-
+/* Navigation Bar */
 .Navigation {
-    background: #343a40;
-    padding: 10px;
+    background: #343a40; /* Dark grey */
+    padding: 5% 0;
+    max-width: 100%;
 }
 
 .Navigation ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center; 
-    flex-direction: row; 
-    flex-wrap: wrap; 
+    justify-content: center;
 }
 
 .Navigation li {
-    margin: 0 10px;
+    margin: 0 15px;
+}
 
 .Navigation a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
 }
 
 .Navigation a:hover,
 .Navigation a.active {
-    background: #495057;
+    background: #495057; /* Slightly lighter grey for hover effect */
+    transform: scale(1.1);
 }
 
+/* Section Styling */
+section {
+    margin: 20px auto; /* Space around sections, centered */
+}
 
+section#conclusionindex {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Make sure all elements are centered and legible */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* Ensure readable background */
+}
