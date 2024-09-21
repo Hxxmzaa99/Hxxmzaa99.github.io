@@ -2,28 +2,21 @@ function startCountdown() {
     const countdownElement = document.getElementById('countdown-timer');
 
     // Set the event date (Year, Month - 1, Day, Hours, Minutes, Seconds)
-    const eventDate = new Date('2026-09-01T23:59:59').getTime();
+    const eventDate = new Date('2026-12-31T23:59:59').getTime(); // Example date
 
     // Update the countdown every second
     const countdownInterval = setInterval(function() {
         const now = new Date().getTime();
         const timeLeft = eventDate - now;
 
-        // Time calculation constants
-        const yearInMilliseconds = 1000 * 60 * 60 * 24 * 365.25; // Approximate length of a year, considering leap years
-        const monthInMilliseconds = 1000 * 60 * 60 * 24 * 30; // Approximate length of a month
-        const dayInMilliseconds = 1000 * 60 * 60 * 24;
-        const hourInMilliseconds = 1000 * 60 * 60;
-        const minuteInMilliseconds = 1000 * 60;
-        const secondInMilliseconds = 1000;
-
-        // Calculate years, months, days, hours, minutes, and seconds
-        const years = Math.floor(timeLeft / yearInMilliseconds);
-        const months = Math.floor((timeLeft % yearInMilliseconds) / monthInMilliseconds);
-        const days = Math.floor((timeLeft % monthInMilliseconds) / dayInMilliseconds);
-        const hours = Math.floor((timeLeft % dayInMilliseconds) / hourInMilliseconds);
-        const minutes = Math.floor((timeLeft % hourInMilliseconds) / minuteInMilliseconds);
-        const seconds = Math.floor((timeLeft % minuteInMilliseconds) / secondInMilliseconds);
+        // Calculate time components
+        const totalSecondsLeft = Math.floor(timeLeft / 1000);
+        const years = Math.floor(totalSecondsLeft / (3600 * 24 * 365.25));
+        const months = Math.floor((totalSecondsLeft % (3600 * 24 * 365.25)) / (3600 * 24 * 30));
+        const days = Math.floor((totalSecondsLeft % (3600 * 24 * 30)) / (3600 * 24));
+        const hours = Math.floor((totalSecondsLeft % (3600 * 24)) / 3600);
+        const minutes = Math.floor((totalSecondsLeft % 3600) / 60);
+        const seconds = totalSecondsLeft % 60;
 
         // Display the result
         countdownElement.innerHTML =
@@ -34,4 +27,15 @@ function startCountdown() {
             (minutes < 10 ? '0' + minutes : minutes) + ":" +
             (seconds < 10 ? '0' + seconds : seconds);
 
-        // If the countdown is
+        // If the countdown is finished, clear the interval and show a message
+        if (timeLeft < 0) {
+            clearInterval(countdownInterval);
+            countdownElement.innerHTML = "Event started!";
+        }
+    }, 1000);
+}
+
+// Call the countdown function when the page loads
+window.addEventListener('load', function() {
+    startCountdown();
+});
