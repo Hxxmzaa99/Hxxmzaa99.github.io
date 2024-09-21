@@ -2,7 +2,7 @@ function startCountdown() {
     const countdownElement = document.getElementById('countdown-timer');
 
     // Set the event date (Year, Month - 1, Day, Hours, Minutes, Seconds)
-    const eventDate = new Date('2026-08-31T23:59:59').getTime(); // Example: December 31, 2026
+    const eventDate = new Date('2026-09-01T23:59:59').getTime();
 
     // Update the countdown every second
     const countdownInterval = setInterval(function() {
