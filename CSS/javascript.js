@@ -1,41 +1,36 @@
-function startCountdown() {
-    const countdownElement = document.getElementById('countdown-timer');
+function compteARebours() {
+    const affichageCountdown = document.getElementById('countdown-timer');
 
-    // Set the event date (Year, Month - 1, Day, Hours, Minutes, Seconds)
-    const eventDate = new Date('2026-12-31T23:59:59').getTime(); // Example date
+    const dateFin = new Date('2026-12-31T23:59:59').getTime(); // Fin du diplome
 
-    // Update the countdown every second
-    const countdownInterval = setInterval(function() {
-        const now = new Date().getTime();
-        const timeLeft = eventDate - now;
+    const intervalCountdown = setInterval(function() {
+        const maintenant = new Date().getTime();
+        const tempsRestant = dateFin - maintenant;
 
-        // Calculate time components
-        const totalSecondsLeft = Math.floor(timeLeft / 1000);
-        const years = Math.floor(totalSecondsLeft / (3600 * 24 * 365.25));
-        const months = Math.floor((totalSecondsLeft % (3600 * 24 * 365.25)) / (3600 * 24 * 30));
-        const days = Math.floor((totalSecondsLeft % (3600 * 24 * 30)) / (3600 * 24));
-        const hours = Math.floor((totalSecondsLeft % (3600 * 24)) / 3600);
-        const minutes = Math.floor((totalSecondsLeft % 3600) / 60);
-        const seconds = totalSecondsLeft % 60;
+        const totalSecondesRestantes = Math.floor(tempsRestant / 1000);
+        const annees = Math.floor(totalSecondesRestantes / (3600 * 24 * 365.25));
+        const mois = Math.floor((totalSecondesRestantes % (3600 * 24 * 365.25)) / (3600 * 24 * 30));
+        const jours = Math.floor((totalSecondesRestantes % (3600 * 24 * 30)) / (3600 * 24));
+        const heures = Math.floor((totalSecondesRestantes % (3600 * 24)) / 3600);
+        const minutes = Math.floor((totalSecondesRestantes % 3600) / 60);
+        const secondes = totalSecondesRestantes % 60;
 
-        // Display the result
-        countdownElement.innerHTML =
-            (years < 10 ? '0' + years : years) + " years, " +
-            (months < 10 ? '0' + months : months) + " months, " +
-            (days < 10 ? '0' + days : days) + " days, " +
-            (hours < 10 ? '0' + hours : hours) + ":" +
+        affichageCountdown.innerHTML =
+            (annees < 10 ? '0' + annees : annees) + " annees, " +
+            (mois < 10 ? '0' + mois : mois) + " mois, " +
+            (jours < 10 ? '0' + jours : jours) + " jours, " +
+            (heures < 10 ? '0' + heures : heures) + ":" +
             (minutes < 10 ? '0' + minutes : minutes) + ":" +
-            (seconds < 10 ? '0' + seconds : seconds);
+            (secondes < 10 ? '0' + secondes : secondes);
 
-        // If the countdown is finished, clear the interval and show a message
-        if (timeLeft < 0) {
-            clearInterval(countdownInterval);
-            countdownElement.innerHTML = "Event started!";
+        // Si le compte a rebours est termine 
+        if (tempsRestant < 0) {
+            clearInterval(intervalCountdown);
+            affichageCountdown.innerHTML = "C'est le grand jour !";
         }
     }, 1000);
 }
 
-// Call the countdown function when the page loads
 window.addEventListener('load', function() {
-    startCountdown();
+    compteARebours();
 });
