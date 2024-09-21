@@ -90,32 +90,32 @@ footer a:hover {
 
 
 .Navigation {
-    background: var(--secondary-bg);
-    padding: 5% 0;
+    background: #343a40;
+    padding: 10px;
 }
 
 .Navigation ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
 }
 
 .Navigation li {
-    margin: 0 15px;
-}
+    margin: 0 10px;
 
 .Navigation a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
 .Navigation a:hover,
 .Navigation a.active {
     background: #495057;
-    transform: scale(1.1);
 }
 
 
