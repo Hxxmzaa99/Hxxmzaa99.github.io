@@ -66,6 +66,10 @@ footer a:hover {
     color: var(--highlight-color);
 }
 
+footer p {
+    background: white;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
