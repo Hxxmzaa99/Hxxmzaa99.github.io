@@ -50,3 +50,28 @@ projectImages.forEach((img) => {
         projectDescription.textContent = description;
     });
 });
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const captionText = document.getElementById("caption");
+const images = document.querySelectorAll(".project-gallery img");
+const closeModal = document.querySelector(".close");
+
+images.forEach(image => {
+    image.addEventListener("click", function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    });
+});
+
+closeModal.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
